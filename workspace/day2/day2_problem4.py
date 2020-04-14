@@ -57,12 +57,17 @@ if __name__ == '__main__':
                               "(입력 예시 : 1000 apple)".format(userMoney[log_input_id], userID))
                         trans_input, who = input(">>> ").split()
                         trans_input = int(trans_input)
-                        if userMoney[log_input_id] - trans_input < 0:
-                            print("이체 할 수 없습니다.")
-                        else:
-                            userMoney[log_input_id] -= trans_input
-                            print("{}에게 {}원을 성공적으로 보냈습니다. (현재 통장에 있는 금액 : {}원)".format(who, trans_input, userMoney[log_input_id]))
-                            userMoney[who] = trans_input
+                        if who not in userID:
+                            print("{}은(는) 없는 사용자입니다.".format(who))
+                            break
+
+                        elif who in userID:
+                            if userMoney[log_input_id] - trans_input < 0:
+                                print("이체 할 수 없습니다.")
+                            else:
+                                userMoney[log_input_id] -= trans_input
+                                print("{}에게 {}원을 성공적으로 보냈습니다. (현재 통장에 있는 금액 : {}원)".format(who, trans_input, userMoney[log_input_id]))
+                                userMoney[who] = trans_input
 
         elif answer == 2:
             reg_input_id = input("아이디를 입력하세요 : ")
