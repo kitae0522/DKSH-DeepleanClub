@@ -1,3 +1,8 @@
+'''
+FileName : day2_problem2.py
+Coder : Song Ki Tae
+'''
+
 import random as ran
 
 
@@ -47,7 +52,7 @@ def sort_3(num_list):
 
 if __name__ == '__main__':
 
-    number = ran.sample(range(1, 50), 7)
+    number = ran.sample(range(1, 50), 6)
 
     print("정렬 전 리스트={}".format(number))
 
@@ -55,7 +60,7 @@ if __name__ == '__main__':
     print("sort_1 정렬 결과={}".format(sort_1_res))
 
     # sort_2_res = sort_2(number)
-    # print("sort_2 정`렬 결과={}".format(sort_2_res))
+    # print("sort_2 정렬 결과={}".format(sort_2_res))
 
     # sort_3_res = sort_3(number)
     # print("sort_3 정렬 결과={}".format(sort_3_res))
