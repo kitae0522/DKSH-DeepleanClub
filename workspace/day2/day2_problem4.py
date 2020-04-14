@@ -61,18 +61,17 @@ if __name__ == '__main__':
 
         elif answer == 2:
             reg_input_id = input("아이디를 입력하세요 : ")
-            for o in range(len(userID)):
-                if reg_input_id == userID[o]:
-                    print("이미 가입된 아이디입니다.")
-                    break
+            if reg_input_id in userID:
+                print("이미 가입된 아이디입니다.")
+                break
 
-                elif reg_input_id != userID[o]:
-                    reg_input_pw = input("비밀번호를 입력하세요 : ")
-                    reg_input_pw_re = input("비밀번호를 다시 입력하세요 : ")
-                    if reg_input_pw == reg_input_pw_re:
-                        userID.append(reg_input_id)
-                        userDB[reg_input_id] = reg_input_pw
-                        userMoney[reg_input_id] = 0
-                        print("회원가입이 완료되었습니다.")
-                    elif reg_input_pw != reg_input_pw_re:
-                        print("비밀번호가 서로 다릅니다.")
+            elif reg_input_id not in userID:
+                reg_input_pw = input("비밀번호를 입력하세요 : ")
+                reg_input_pw_re = input("비밀번호를 다시 입력하세요 : ")
+                if reg_input_pw == reg_input_pw_re:
+                    userID.append(reg_input_id)
+                    userDB[reg_input_id] = reg_input_pw
+                    userMoney[reg_input_id] = 0
+                    print("회원가입이 완료되었습니다.")
+                elif reg_input_pw != reg_input_pw_re:
+                    print("비밀번호가 서로 다릅니다.")
