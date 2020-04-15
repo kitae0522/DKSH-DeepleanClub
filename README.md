@@ -5,7 +5,7 @@
 ---
 
 ## 개발 및 구동 환경
-[![Python](https://img.shields.io/badge/python-3.6-blue.svg?style=flat-square)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/python-3.8-blue.svg?style=flat-square)](https://www.python.org/downloads/)
 * Python 3.8.2
 * Pycharm
 
