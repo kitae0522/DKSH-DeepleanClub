@@ -3,6 +3,7 @@ FileName : day2_problem5.py
 Coder : Song Ki Tae
 '''
 
+
 def toUpper(words):
     Upper_alphabet = {"a":"A", "b":"B", "c":"C", "d":"D", "e":"E", "f":"F", "g":"G", "h":"H", "i":"I",
                       "j":"J", "k":"K", "l":"L", "m":"M", "n":"N", "o":"O", "p":"P", "q":"Q", "r":"R",
@@ -43,4 +44,4 @@ if __name__ == '__main__':
 
     word = "Iron Man"
     print(toUpper(word))
-    # print(toLower(word))
+    print(toLower(word))

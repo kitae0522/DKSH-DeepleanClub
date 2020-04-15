@@ -3,6 +3,7 @@ FileName : day2_problem3.py
 Coder : Song Ki Tae
 '''
 
+
 def palindrome(word):
 
     for i in range(len(word) // 2):  # 문자열 길이의 반만큼 반복
